@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build: config/
+    volumes:
+      - ./APP:/APP
+      - ./.log:/var/log/httpd/
+      - ./config/dados.env:/dev/shm/kdump/kdump.out
+      - ./config/kdump.out:/srv/kdump.out 
+    ports:
+      - 9003:80
