@@ -1,5 +1,5 @@
 from __init__ import app, api
-from controller.V1.Version import VersionController
+from controller.Version import VersionController
 
 # Home
-api.add_resource(VersionController, '/')
+api.add_resource(VersionController, '/version')
