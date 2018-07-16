@@ -8,4 +8,4 @@ services:
       - ./.log:/var/log/httpd/
       - ./config/dados.env:/srv/dados.env
     ports:
-      - 9001:80
+      - 9000:80

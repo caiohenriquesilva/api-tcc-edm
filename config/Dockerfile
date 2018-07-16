@@ -9,6 +9,10 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm \
     && /usr/bin/python3.6 -m venv /var/www/py36_venv --system-site-packages \
     && source /var/www/py36_venv/bin/activate \
     && /var/www/py36_venv/bin/pip install -r /tmp/requirements.txt
+    && export DB_HOSTNAME=localhost
+    && export DB_USER=root
+    && export DB_PASSWORD=root
+    && export DB_NAME=db_name
 
 COPY ./000-default.conf /etc/httpd/conf.d/000-default.conf
 COPY ./dados.env /data/
